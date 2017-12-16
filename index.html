@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			html,body{width: 100%;height: 100%;}
+			body{
+				overflow: hidden;
+			}
+			.balloon{
+				position: absolute;
+				width: 96px;
+				height: 120px;
+				background: url(img/balloon.png) 0 0 no-repeat ;
+				z-index: 100;
+			}
+			.clound{
+				position: absolute;
+				width: 100px;
+				height: 50px;
+				background: url(img/cloud.png) 0 0 no-repeat ;
+				background-size: 100% 100%;
+				opacity: 0.5;
+				z-index: 99;
+			
+			}
+			.score{
+				position: absolute;
+				left:40px;
+				top:40px;
+				font-size:30px;
+				text-align: center;
+				color:#000;
+			}
+			.gun{
+				width:96px;
+				height:96px;
+				background: url(./img/gun.png) no-repeat center center;
+				position: absolute;
+				z-index: 101;
+			}
+			
+			
+			.blow{
+				animation: baozha .4s forwards;
+			}
+			
+			@keyframes baozha{
+				from{}
+				to{transform: scale(10);opacity: 0;}
+			}
+			
+			.addScore{
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				font-size:30px;
+				line-height: 50px;
+				text-align: center;
+				background-color:rgba(0,0,0,.5);
+				opacity: 0;
+				top:45px;
+				left:45px;
+				
+			}
+			.move1{
+				animation: addScore .4s forwards;
+			}
+			
+			@keyframes addScore{
+				from{transform:scale(3);opacity: 1;}
+				to{transform: scale(1);opacity: 0;}
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script src="node_modules/requirejs/require.js" data-main="js/game" ></script>
+		
+	</body>
+	
+	
+</html>
